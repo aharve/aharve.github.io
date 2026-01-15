@@ -8,8 +8,8 @@ const garamond = EB_Garamond({
 });
 
 export const metadata = {
-  title: "Personal Website",
-  description: "A simple personal website.",
+  title: "Arnav Harve",
+  description: "My personal website.",
 };
 
 export default function RootLayout({ children }) {
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           </header>
           <main>{children}</main>
           <footer className="footer">
-            &copy; {new Date().getFullYear()} Personal Website
+            &copy; {new Date().getFullYear()} Arnav Harve
           </footer>
         </div>
       </body>

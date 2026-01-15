@@ -2,7 +2,7 @@ import { getAllPosts } from '@/lib/api';
 import PostPreview from '@/components/PostPreview';
 
 export const metadata = {
-    title: "All Posts | Personal Website",
+    title: "All Posts | Arnav Harve",
 };
 
 export default function Posts() {

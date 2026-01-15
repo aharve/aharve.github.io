@@ -2,7 +2,7 @@ import { projects } from '@/data/projects';
 import ProjectBlock from '@/components/ProjectBlock';
 
 export const metadata = {
-    title: "Projects | Personal Website",
+    title: "Projects | Arnav Harve",
 };
 
 export default function Projects() {

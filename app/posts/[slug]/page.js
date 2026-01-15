@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
         return { title: 'Post Not Found' };
     }
     return {
-        title: `${post.title} | Personal Website`,
+        title: `${post.title} | Arnav Harve`,
     };
 }
 

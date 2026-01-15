@@ -15,9 +15,8 @@ export default function Home() {
       <section style={{ marginBottom: '4rem' }}>
         <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Hello!</h1>
         <p style={{ fontSize: '1.2rem', maxWidth: '600px' }}>
-          I'm Arnav Harve, a current third-year undergraduate at the University of Chicago. I'm curious about virtually everything,
-          with particular interests in emerging technologies, politics and policy, and China. Please enjoy some of my writing below,
-          and feel free to reach out!
+          I'm Arnav Harve, a current third-year undergraduate at the University of Chicago. I'm curious about virtually everything, with particular interests in the societal implications of emerging technologies like AI, US-China competition, and economic development.
+          Please enjoy some of my writing below, and feel free to reach out!
         </p>
       </section>
 
