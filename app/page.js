@@ -1,66 +1,45 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
+import { getAllPosts } from '@/lib/api';
+import { projects } from '@/data/projects';
+import PostPreview from '@/components/PostPreview';
+import ProjectBlock from '@/components/ProjectBlock';
 
 export default function Home() {
+  // Get recent 3 posts
+  const recentPosts = getAllPosts(['title', 'date', 'slug', 'excerpt']).slice(0, 3);
+  // Get recent 3 projects
+  const recentProjects = projects.slice(0, 3);
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div>
+      <section style={{ marginBottom: '4rem' }}>
+        <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Hello!</h1>
+        <p style={{ fontSize: '1.2rem', maxWidth: '600px' }}>
+          I'm Arnav Harve, a current third-year undergraduate at the University of Chicago. I'm curious about virtually everything,
+          with particular interests in emerging technologies, politics and policy, and China. Please enjoy some of my writing below,
+          and feel free to reach out!
+        </p>
+      </section>
+
+      <section style={{ marginBottom: '4rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+          <h2 style={{ margin: 0 }}>Recent Writing</h2>
+          <Link href="/posts">View all</Link>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        {recentPosts.map((post) => (
+          <PostPreview key={post.slug} {...post} />
+        ))}
+      </section>
+
+      <section>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+          <h2 style={{ margin: 0 }}>Recent Projects</h2>
+          <Link href="/projects">View all</Link>
         </div>
-      </main>
+        {recentProjects.map((project, index) => (
+          <ProjectBlock key={index} {...project} />
+        ))}
+      </section>
     </div>
   );
 }
