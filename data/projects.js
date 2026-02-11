@@ -20,7 +20,7 @@ export const projects = [
     {
         title: "Multi-Class Data Labeling through Large Language Models and Weak Supervision",
         description: "CS paper that explores and evaluates the use of LLMs and weak supervision for multi-class data labeling.",
-        link: "https://example.com/delta",
+        link: "https://drive.google.com/file/d/1YfezM5Z_oihiGjW73_OuyTfKnqH9msqN/view?usp=sharing",
         year: "2022"
     }
 ];
