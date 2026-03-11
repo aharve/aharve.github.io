@@ -165,3 +165,9 @@ img {
     width: 100%;
   }
 }
+
+/* Blog Post Content */
+.blog-post-content {
+  font-size: 1.3rem;
+  line-height: 1.8;
+}

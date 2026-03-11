@@ -44,7 +44,7 @@ export default async function Post({ params }) {
                 {format(parseISO(post.date), 'LLLL d, yyyy')}
             </div>
             <div
-                style={{ lineHeight: '1.8' }}
+                className="blog-post-content"
                 dangerouslySetInnerHTML={{ __html: content }}
             />
         </article>
